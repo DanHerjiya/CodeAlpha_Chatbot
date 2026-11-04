@@ -1,0 +1,98 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Classic Chatbot</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+<main class="app-shell">
+
+    <header class="topbar">
+        <div class="brand-mark">C</div>
+
+        <div>
+            <h1>Classic Chatbot</h1>
+            <p>Your simple virtual assistant</p>
+        </div>
+
+        <span class="status">
+            <span class="status-dot"></span>
+            Online
+        </span>
+    </header>
+
+    <section class="chat-card">
+
+        <div class="chat-intro">
+            <div class="bot-avatar">C</div>
+
+            <div>
+                <h2>Welcome!</h2>
+                <p>Ask me something. Type <strong>help</strong> to see what I can do.</p>
+            </div>
+        </div>
+
+        <div id="messages" class="messages" aria-live="polite">
+
+            <div class="message bot-message">
+                <div class="message-avatar">C</div>
+
+                <div class="bubble">
+                    Hello! I'm Classic Chatbot. How can I help you today?
+                    <span class="message-time">Just now</span>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="suggestions">
+            <button type="button" class="suggestion">What can you do?</button>
+
+            <button type="button" class="suggestion">What time is it?</button>
+
+            <button type="button" class="suggestion">What is Python?</button>
+        </div>
+
+        <form id="chat-form" class="composer">
+
+            <label class="sr-only" for="message-input">
+                Type your message
+            </label>
+
+            <input
+                id="message-input"
+                type="text"
+                maxlength="500"
+                placeholder="Type your message here..."
+                autocomplete="off"
+                required
+            >
+
+            <button id="send-button" type="submit">
+                Send
+            </button>
+
+        </form>
+
+        <p class="disclaimer">
+            This demonstration chatbot uses predefined responses.
+        </p>
+
+    </section>
+
+    <footer>
+        Built with Python and Flask
+    </footer>
+
+</main>
+
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+
+</body>
+</html>
